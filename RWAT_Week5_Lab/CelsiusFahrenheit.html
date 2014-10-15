@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Celcius and Fahrenheit</title>
+
+<script type="text/javascript">
+	function getFahrenheit(){
+		var val = document.getElementById("celsius").value;
+		if(!checkValue(val)){
+			alert("Invalid Celsius value: " + val);
+		}
+		
+		var fahrenheit = Math.round(calcF(val) * 100) / 100;
+		document.getElementById("fahrenheit").value = fahrenheit;
+	}
+	
+	function getCelsius(){
+		var val = document.getElementById("fahrenheit").value;
+		if(!checkValue(val)){
+			alert("Invalid Fahrenheit value: " + val);
+		}
+		
+		var celsius = Math.round(calcC(val) * 10) / 10;
+		document.getElementById("celsius").value = celsius;
+	}
+	
+	function calcC(f){
+		return (parseFloat(f)-32) * (5/9);
+	}
+	
+	function calcF(c){
+		return parseFloat(c) * (9/5) + 32.00;
+	}
+	
+	function checkValue(n){
+		if(parseFloat(n) == NaN)
+			return false;
+		else
+			return true;
+	}
+</script>
+
+</head>
+<body>
+	<label for="celcius">Celsius</label>
+	<input id="celsius" type="text">
+	<label for="fahrenheit">Fahrenheit</label>
+	<input id="fahrenheit" type="text">
+	<br>
+	<button name="bCelsius" onclick="getFahrenheit()">Convert Celsius to Fahrenheit</button>
+	<button name="bFahrenheit" onclick="getCelsius()">Convert Fahrenheit to Celsius</button>
+</body>
+</html>
