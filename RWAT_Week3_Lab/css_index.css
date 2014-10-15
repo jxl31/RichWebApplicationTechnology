@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+#div_external{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 10.5rem;
+	height: 100%;
+	padding: 16px 0px 0px 8px;
+}
+
+div > img {
+	width: 11rem;
+	height: 9rem;
+}
+
+#firstlink{
+	margin: 0 0.6em 0 0.7em;
+	padding: 0.25em 0;
+}
+
+#first_link > ul{
+	list-style-type: none;
+	list-style-image: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+div > ul > li {
+	line-height: 1.125em;
+	margin: 0;
+	padding: 0.25em 0;
+	font-size: 0.75em;
+	word-wrap: break-word;
+}

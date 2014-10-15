@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+/*
+	Applies to all div.
+	
+	margin is the distance between boxes (div).
+	padding is the distance between the border and the content.
+	
+	position:static (must include to avoid different conflict in different browser.)
+					(static means that you can position the element however you like)
+					
+	if the div container has position relative then any other child of the container will take 
+	reference to the position of the main container. From the example css below, the child div
+	eventhough it has position absolute it will be inside the main div.
+	
+	e.g. 
+	
+	#div-main {
+		position: relative;
+	}
+	
+	#div-child{
+		position: absolute;
+		top: 20px
+	}
+	
+	clear attribute will clear the float of a div on top of the element
+*/
+div {
+	
+}

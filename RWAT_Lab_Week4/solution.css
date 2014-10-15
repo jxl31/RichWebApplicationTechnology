@@ -1,7 +1,12 @@
+#main_div{
+	height:100%;
+	width: 100%;
+}
+
 #left{
 	position: absolute;
 	top: 150px;
-	height: calc(4000.250px - 160px + 25px);
+	height: 100%;
 	padding-top: 1em;
 	width: 11.5em;
 	left: 0;
@@ -218,6 +223,7 @@ h2 > a {
 
 body{
 	margin-top:0px;
+	background-color: #F5F5F5;
 }
 
 #last_nav{
