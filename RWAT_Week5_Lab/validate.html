@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validate Form</title>
+
+<script type="text/javascript">
+	function validate(){
+		var err = [];
+		var i = 1;
+		if(document.lab_form.lab_name.value.trim() == ""){
+			err.push(i + ". Please fill in the name.");
+			i++;
+		}if(document.lab_form.agegroup.value == "age0"){
+			err.push(i + ". Please select age.");
+			i++;
+		}if(document.lab_form.sex.value == ""){
+			err.push(i + ". Please select a gender.");
+			i++;
+		}if(!document.lab_form.terms.checked){
+			err.push(i + ". Please agree check the terms and condition to continue.");
+			i++;
+		}if(err.length == 0){
+			alert("Welcome!");
+			i = 0;
+		}else{
+			show_error(err);
+		}
+	}
+	
+	function show_error(error){
+		var message = "";
+		for(var s = 0; s < error.length; s++){
+			message += error[s] + "\n";
+		}
+		alert(message);
+	}
+</script>
+
+</head>
+<body>
+	<form name="lab_form" action="#" onSubmit="validate()">
+		<p>
+			Name: <input type="text" name="lab_name">
+		</p>
+		<p>
+			Age: <select name="agegroup">
+					<option value="age0"></option>
+					<option value="age1">0-18</option>
+					<option value="age2">18-30</option>
+					<option value="age3">30-45</option>
+					<option value="age4">45-60</option>
+					<option value="age5">60+</option>
+				</select>
+		</p>
+		<p>
+			<input type="radio" name="sex" value="male">Male
+			<input type="radio" name="sex" value="female">Female
+		</p>
+		<p> 
+			<input type="checkbox" name="terms" value="agree">Click box if you agree in the terms and condition.
+		</p>
+		<p> 
+			<input type="submit" name="submit" value="register">
+		</p>
+		
+	</form>
+</body>
+</html>
