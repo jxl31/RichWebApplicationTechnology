@@ -8,8 +8,8 @@
 	function validate(){
 		var err = [];
 		var i = 1;
-		if(document.lab_form.lab_name.value.trim() == ""){
-			err.push(i + ". Please fill in the name.");
+		if(document.lab_form.lab_name.value.trim() == "" || document.lab_form.lab_name.value.match(".*\\d.*") != null){
+			err.push(i + ". Please fill in valid name.");
 			i++;
 		}if(document.lab_form.agegroup.value == "age0"){
 			err.push(i + ". Please select age.");
